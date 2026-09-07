@@ -194,25 +194,30 @@ nav {
   min-width: 200px;
   background-color: #fff;
   border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 28px 20px;
+  border-radius: 8px;
+  padding: 32px 20px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.about-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
   .about-boxes {
-    flex-wrap: nowrap;
-    gap: 8px;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    overflow-x: auto !important; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 10px !important; 
+    -webkit-overflow-scrolling: touch; 
   }
-  .about-box {
-    min-width: 0;
-    padding: 16px 8px;
-    font-size: 0.8rem;
-  }
-  .about-box p {
-    font-size: 0.75rem;
-  }
-}
-}
+
   .about-box {
     flex: 0 0 82% !important; 
     min-width: 260px !important; 
@@ -220,10 +225,17 @@ nav {
     box-sizing: border-box !important;
   }
 }
+
 .about-icon {
-  font-size: 1.75rem;
-  display: block;
-  margin-bottom: 12px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background-color: rgba(201, 147, 47, 0.15);
+  font-size: 1.5rem;
 }
 
 .about-box h3 {
@@ -258,8 +270,18 @@ nav {
 }
 
 .project-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
   border-top: 3px solid var(--color-accent);
-  padding-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project-card img {
@@ -279,10 +301,18 @@ nav {
 }
 
 .project-link {
+  display: inline-block;
   font-weight: 600;
-  color: var(--color-accent);
-  border-bottom: 1px solid var(--color-accent);
-  padding-bottom: 2px;
+  color: #fff;
+  background-color: var(--color-dark);
+  padding: 10px 24px;
+  border-radius: 6px;
+  border-bottom: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-link:hover {
+  opacity: 0.85;
 }
 
 #contact {
