@@ -200,17 +200,18 @@ nav {
 }
 @media (max-width: 768px) {
   .about-boxes {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    gap: 15px !important;
-    overflow-x: auto !important; 
-    scroll-snap-type: x mandatory; 
-    padding-bottom: 10px !important; 
-    -webkit-overflow-scrolling: touch; 
+    flex-wrap: nowrap;
+    gap: 8px;
   }
-
+  .about-box {
+    min-width: 0;
+    padding: 16px 8px;
+    font-size: 0.8rem;
+  }
+  .about-box p {
+    font-size: 0.75rem;
+  }
+}
   .about-box {
     flex: 0 0 82% !important; 
     min-width: 260px !important; 
